@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Personalizado</title>
+<style>
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Divides the grid into 12 columns */
+    grid-template-rows: auto; /* Rows adjust to content */
+    grid-gap: 10px;
+    height: 100vh;
+    padding: 10px;
+  }
+  .dashboard > div {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .header {
+    grid-area: header;
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .content {
+    grid-area: content;
+  }
+  .footer {
+    grid-area: footer;
+  }
+  /* Explicitly naming the areas */
+  .dashboard {
+    grid-template-areas:
+      "header header header header header header header header header header header header"
+      "sidebar content content content content content content content content content content content"
+      "sidebar footer footer footer footer footer footer footer footer footer footer footer";
+  }
+  /* Styling for the header */
+  .header {
+    grid-column: 1 / -1; /* Span across all columns */
+  }
+  /* Styling for the sidebar */
+  .sidebar {
+    grid-column: 1 / span 2; /* Take up two columns */
+    grid-row: 2 / 4; /* Span from the second to the last row */
+  }
+  /* Styling for the main content */
+  .content {
+    grid-column: 3 / -1; /* Span from the third column to the last */
+    grid-row: 2 / 3; /* Only take up the second row */
+  }
+  /* Styling for the footer */
+  .footer {
+    grid-column: 3 / -1; /* Span from the third column to the last */
+    grid-row: 3 / 4; /* Only take up the last row */
+  }
+</style>
+</head>
+<body>
+
+<div class="dashboard">
+  <div class="header">Cabecera</div>
+  <div class="sidebar">Barra Lateral</div>
+  <div class="content">Contenido Principal</div>
+  <div class="footer">Pie de Página</div>
+</div>
+
+</body>
+</html>
