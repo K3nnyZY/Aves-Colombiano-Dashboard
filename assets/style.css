@@ -1,0 +1,59 @@
+#grafica-contenedor1 {
+    width: 500px; /* Cambia el ancho a 400px */
+    height: 300px; /* Cambia la altura a 400px */
+    position: absolute;
+    left: 1px; /* Mueve el contenedor 100px a la derecha */
+    top: 1px; /* Mueve el contenedor 150px hacia abajo */
+    border: 3px; /* Cambia el borde a azul y lo hace más grueso */
+    border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
+    background-color: white; /* Establece el color de fondo a blanco */
+}
+
+#grafica-contenedor2 {
+    width: 450px;
+    height: 420px;
+    position: absolute;
+    left: 900px;
+    top: 200px;
+    border: 2px;
+    border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
+    background-color: white; /* Establece el color de fondo a blanco */
+}
+
+#grafica-contenedor3 {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 1px;
+    top: 350px;
+    border: 2px;
+    border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
+    background-color: white; /* Establece el color de fondo a blanco */
+}
+
+#nombre-contenedor {
+    position: fixed; /* Posición fija para que se mantenga en lugar aunque se haga scroll */
+    bottom: 0; /* Cambia esto para mover verticalmente */
+    top: 710px; /* Cambia esto para mover verticalmente */
+    right:0px; /* Establece la distancia desde el borde derecho */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para visibilidad */
+    padding: 10px; /* Espacio alrededor del texto */
+    font-size: 15px; /* Tamaño de la letra */
+    z-index: 10; /* Asegura que el contenedor se muestre sobre otros elementos */
+    border-radius: 10px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('pajaro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

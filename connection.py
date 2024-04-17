@@ -1,13 +1,20 @@
 import psycopg2
-try:    
-    conn = psycopg2.connect(
+
+# Conectar a la base de datos
+def get_connection():
+    return psycopg2.connect(
         host="localhost",
         user="postgres",
         password="Kenny_Zhu158",
         database="aves"
     )
-    print("Conexion exitosa")
+
+# Consulta de datos
+def fetch_data(query):
+    conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM aves")
-except Exception as e:
-    print(f"Ocurrio un error: {e}")
+    cursor.execute(query)
+    data = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return data
