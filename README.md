@@ -1,5 +1,5 @@
 # Dashboard Aves del caribe Colombiano
-![Markdown](/.things/dashboard.png)
+![Markdown](/src/assets/dashboard.png)
 ## Descripción
 Este dashboard tiene como objetivo mostrar la información de las aves del caribe colombiano de los datos de gbif, que se pueden encontrar en el siguiente enlace: [https://www.gbif.org/](https://www.gbif.org/).
 ## Requerimientos

@@ -1,4 +1,4 @@
 .venv
 .things
-.DS_store
-__pycache__
+.DS_Store
+__pycache__/
