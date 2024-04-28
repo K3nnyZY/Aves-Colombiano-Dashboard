@@ -1,48 +1,140 @@
 #grafica-contenedor1 {
-    width: 500px; /* Cambia el ancho a 400px */
-    height: 300px; /* Cambia la altura a 400px */
+    width: 410px; /* Cambia el ancho a 400px */
+    height: 280px; /* Cambia la altura a 400px */
     position: absolute;
-    left: 1px; /* Mueve el contenedor 100px a la derecha */
-    top: 1px; /* Mueve el contenedor 150px hacia abajo */
+    left: 1020px; /* Mueve el contenedor 100px a la derecha */
+    top: 100px; /* Mueve el contenedor 150px hacia abajo */
     border: 3px; /* Cambia el borde a azul y lo hace más grueso */
     border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
     background-color: white; /* Establece el color de fondo a blanco */
 }
 
 #grafica-contenedor2 {
-    width: 450px;
-    height: 420px;
+    width: 277px;
+    height: 370px;
     position: absolute;
-    left: 900px;
-    top: 200px;
+    left: 730px;
+    top: 10px;
     border: 2px;
     border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
     background-color: white; /* Establece el color de fondo a blanco */
 }
 
 #grafica-contenedor3 {
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 300px;
     position: absolute;
-    left: 1px;
-    top: 350px;
+    left: 730px;
+    top: 400px;
     border: 2px;
     border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
     background-color: white; /* Establece el color de fondo a blanco */
 }
 
-#nombre-contenedor {
-    position: fixed; /* Posición fija para que se mantenga en lugar aunque se haga scroll */
-    bottom: 0; /* Cambia esto para mover verticalmente */
-    top: 710px; /* Cambia esto para mover verticalmente */
-    right:0px; /* Establece la distancia desde el borde derecho */
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para visibilidad */
-    padding: 10px; /* Espacio alrededor del texto */
-    font-size: 15px; /* Tamaño de la letra */
-    z-index: 10; /* Asegura que el contenedor se muestre sobre otros elementos */
-    border-radius: 10px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
+#grafica-contenedor4 {
+    width: 700px;
+    height: 250px;
+    position: absolute;
+    left: 10px;
+    top: 450px;
+    border: 2px;
+    border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
+    background-color: white; /* Establece el color de fondo a blanco */
 }
 
+#grafica-contenedor5 {
+    width: 250px;
+    height: 425px;
+    position: absolute;
+    left: 465px;
+    top: 10px;
+    border: 2px;
+    border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
+    background-color: white; /* Establece el color de fondo a blanco */
+}
+
+#map-container {
+    width: 440px;
+    height: 425px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 30px; /* Ajusta el valor según tux preferencia para el redondeo de las esquinas */
+    background-color: white; /* Establece el color de fondo a blanco */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+#grafica-contenedor1,
+#grafica-contenedor2,
+#grafica-contenedor3,
+#grafica-contenedor4,
+#grafica-contenedor5, 
+.tarjeta,
+#map-container{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega sombra a los bordes */
+}
+
+/* Estilo para todas las tarjetas */
+.tarjeta {
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 155px; /* Puedes ajustar el ancho según tus necesidades */
+    height: 40px; /* Puedes ajustar la altura según tus necesidades */
+    position: absolute;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar el contenido verticalmente */
+}
+
+/* Posicionamiento específico para cada tarjeta */
+#tarjeta-total-registros {
+    left: 1025px;
+    background-color: rgb(23, 204, 47);
+    top: 10px;
+}
+
+#tarjeta-numero-especies {
+    left: 1230px;
+    background-color: white;
+    top: 10px;
+}
+
+.tarjeta p {
+    font-size: 24px; /* Aumenta el tamaño de la fuente del párrafo */
+    margin-top: 0; /* Si aún no lo has hecho, elimina el margen superior */
+}
+
+#nombre-contenedor {
+    width: 46.4%; /* Asegúrate de que ocupe todo el ancho de la pantalla */
+    position: fixed;
+    bottom: 0;
+    right: 0; /* Ancla el contenedor al lado derecho de la pantalla */
+    background-color: rgba(26, 114, 51, 0.7);
+    padding: 2px 30px; /* top, right, bottom, left */
+    font-size: 19px;
+    color: black;
+    z-index: 10;
+    text-align: right; /* Alinea el texto a la izquierda dentro del contenedor */
+    border-radius: 0; /* Elimina el redondeo de las esquinas si quieres que se extienda completamente */
+    font: oblique bold 140% cursive;
+}
+
+#nombre-aves {
+    width: 45.28%; /* Asegúrate de que ocupe todo el ancho de la pantalla */
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Ancla el contenedor al lado derecho de la pantalla */
+    background-color: rgba(26, 114, 51, 0.7);
+    padding: 2px 30px; /* top, right, bottom, left */
+    font-size: 19px;
+    color: black;
+    z-index: 10;
+    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
+    border-radius: 0; /* Elimina el redondeo de las esquinas si quieres que se extienda completamente */
+    font: oblique bold 140% cursive;
+}
 
 html, body {
     margin: 0;
