@@ -1,2 +1,4 @@
 .venv
 .things
+.DS_store
+__pycache__
