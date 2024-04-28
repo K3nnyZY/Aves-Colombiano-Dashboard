@@ -11,12 +11,12 @@ def plot_bar_chart(data):
         y=families,
         labels={'y': 'Familia', 'x': 'Numero de observaciones'},
         color_discrete_sequence=["forestgreen"] * len(families), 
-        title='Top 10 familias de aves mas observadas en Colombia'
+        title='Top 10 especies de aves mas observadas en el caribe'
     )
     fig.update_layout(
         margin=dict(l=40, r=40, t=40, b=40), 
         paper_bgcolor='rgba(0,0,0,0)',
-        yaxis=dict(showgrid=False, title=''),  # Elimina el título del eje Y
+        yaxis=dict(showgrid=False, autorange='reversed', title=''),  # Elimina el título del eje Y
         xaxis=dict(title_standoff=25, title=''),  # Elimina el título del eje X
         title={
             'x': 0.5,

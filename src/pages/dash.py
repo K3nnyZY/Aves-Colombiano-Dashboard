@@ -4,9 +4,9 @@ from connection import fetch_data
 from graph import *
 
 data1 = fetch_data("""   
-    SELECT family, COUNT(*) AS count
+    SELECT species, COUNT(*) AS count
     FROM aves
-    GROUP BY family
+    GROUP BY species
     ORDER BY count DESC
     LIMIT 10""")
 

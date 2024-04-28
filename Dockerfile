@@ -2,13 +2,13 @@ FROM python:3.9
 
 WORKDIR /app
 
-COPY . .
+COPY ./src/requirements.txt /app/requirements.txt
 
-RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 8080
+COPY ./src /app
 
-ENV PYTHONUNBUFFERED 1
+EXPOSE 8050
 
-CMD ["python", "./src/app.py"]
+CMD ["python", "app.py"]
