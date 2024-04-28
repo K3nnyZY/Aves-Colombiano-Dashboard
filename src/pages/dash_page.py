@@ -32,7 +32,7 @@ data2 = fetch_data("""
     SELECT stateprovince AS Departamento, COUNT(DISTINCT species) AS Especies_Unicas, COUNT(*) AS Observaciones_Total
     FROM aves
     GROUP BY stateprovince
-    ORDER BY Especies_Unicas DESC""")
+    ORDER BY Observaciones_Total DESC""")
 
 fig3 = plot_bubble_chart(data2)
 fig3.update_layout(
@@ -79,7 +79,7 @@ FROM aves;
 numero_especies = numero_especies_data[0][0]
 
 ##########################################################################################################################################
-dash.register_page(__name__,path="/dash",name = "Dashboard")
+dash.register_page(__name__,path="/dash_page",name = "Dashboard")
 
 layout = html.Div([
     html.Div(

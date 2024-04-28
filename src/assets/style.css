@@ -91,13 +91,13 @@
 /* Posicionamiento específico para cada tarjeta */
 #tarjeta-total-registros {
     left: 1025px;
-    background-color: rgb(23, 204, 47);
+    background-color: #11a216ff;
     top: 10px;
 }
 
 #tarjeta-numero-especies {
     left: 1230px;
-    background-color: white;
+    background-color: #0b7212;
     top: 10px;
 }
 
@@ -135,6 +135,7 @@
     border-radius: 0; /* Elimina el redondeo de las esquinas si quieres que se extienda completamente */
     font: oblique bold 140% cursive;
 }
+
 
 html, body {
     margin: 0;
@@ -178,3 +179,12 @@ body {
     background-color: #0056b3;
 }
 
+/* style.css */
+.background-image {
+    background-image: url('/assets/intro1.png'); /* Asegúrate de que la ruta sea correcta */
+    height: 100vh; /* O la altura que desees para tu imagen de fondo */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  

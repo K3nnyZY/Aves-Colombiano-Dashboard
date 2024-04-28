@@ -11,7 +11,7 @@ def plot_bar_chart(data):
         y=families,
         labels={'y': 'Familia', 'x': 'Numero de observaciones'},
         color_discrete_sequence=["forestgreen"] * len(families), 
-        title='Top 10 especies de aves mas observadas en el caribe'
+        title='Top 10 especies'
     )
     fig.update_layout(
         margin=dict(l=40, r=40, t=40, b=40), 
@@ -22,7 +22,7 @@ def plot_bar_chart(data):
             'x': 0.5,
             'xanchor': 'center',
             'yanchor': 'top',
-            'font': dict(size=14)
+            'font': dict(size=14, family='Arial Black')
         }
     )
     fig.update_traces(marker_color='forestgreen')
@@ -33,12 +33,14 @@ def plot_bar_chart(data):
 def plot_pie_chart(data):
     types_of_records = [item[0] for item in data]
     counts = [item[1] for item in data]
+    custom_colors = [ '#06330b', '#0b4d19', '#16690d', '#11a216', '#7ce939',
+                     '#80da58', '#b8f17a', '#b6f78c', '#aff0bb']
     fig = go.Figure(data=[
         go.Pie(
             labels=types_of_records,
             values=counts,
             hole=0.4,
-            marker=dict(colors=px.colors.sequential.Greens[-6:] ), 
+            marker=dict(colors=custom_colors), 
             textinfo='label+percent', 
             insidetextorientation='radial'
         )
@@ -46,12 +48,12 @@ def plot_pie_chart(data):
     fig.update_layout(
         margin=dict(l=40, r=40, t=40, b=40), 
         plot_bgcolor='white',
-        title={'text': 'Proporción de categorias de riesgo', 
+        title={'text': 'Proporción categorias de riesgo', 
             'x': 0.5, 
             'y': 0.95, 
             'xanchor': 'center',
             'yanchor': 'top',
-            'font': dict(size=14)
+            'font': dict(size=14, family='Arial Black')
         },
         paper_bgcolor='rgba(0,0,0,0)'
     )
@@ -63,6 +65,8 @@ def plot_bubble_chart(data):
     departamentos = [item[0] for item in data]
     especies_unicas = [item[1] for item in data]
     observaciones_total = [item[2] for item in data]
+    custom_colors = [ '#06330b', '#0b4d19', '#16690d', '#11a216', '#7ce939',
+                     '#80da58', '#b8f17a', '#b6f78c', '#aff0bb']
     fig = px.scatter(
         x=departamentos,
         y=especies_unicas,
@@ -70,11 +74,11 @@ def plot_bubble_chart(data):
         color=especies_unicas,
         size_max=80,
         labels={'x': 'Departamento', 'y': 'Especies Únicas', 'size': 'Observaciones Totales'},
-        color_continuous_scale=px.colors.sequential.Greens
+        color_continuous_scale=custom_colors[::-1]
     )
     fig.update_layout(
         margin=dict(l=20, r=20, t=40, b=20), 
-        title={'text':'Observaciones Totales por Departamento','x': 0.5},
+        title={'text':'Distribución de aves por departamento','x': 0.5, 'font': dict(size=14, family='Arial Black')},
         paper_bgcolor='rgba(0,0,0,0)',
         coloraxis_showscale=False,
         xaxis=dict(title=''),  # Elimina el título del eje X
@@ -97,7 +101,7 @@ def plot_line_chart(data):
 
     fig.update_traces(line=dict(color='green'))  
     fig.update_layout(
-        title={'text': 'Número de Registros por Año', 'x': 0.5}, 
+        title={'text': 'Número de Registros por Año', 'x': 0.5, 'font': dict(size=14, family='Arial Black')}, 
         paper_bgcolor='rgba(0,0,0,0)',
         coloraxis_showscale=False,
         xaxis=dict(title=''),  # Elimina el título del eje X
@@ -139,7 +143,7 @@ def plot_indicators_chart(data):
 
     fig.update_layout(
         grid=dict(rows=total_gauges, columns=1, pattern='independent'),
-        title=dict(text='Top 3 Empresas', x=0.5, y=0.95, font=dict(size=14)),
+        title=dict(text='Top 3 Empresas', x=0.5, y=0.95, font=dict(size=14, family='Arial Black')),
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
         margin=dict(l=10, r=10, t=70, b=10),

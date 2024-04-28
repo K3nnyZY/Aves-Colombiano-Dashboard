@@ -3,6 +3,12 @@ from dash import html, dcc
 
 app = dash.Dash(__name__, use_pages=True)
 
+orden_paginas = [
+    {"name": "Introducción", "relative_path": "/introduction"},
+    {"name": "Descripción de datos", "relative_path": "/description"},
+    {"name": "Dashboard", "relative_path": "/dash_page"},
+]
+
 app.layout = html.Div(
     [
         dash.page_container,  # Contenedor principal de páginas
@@ -15,7 +21,7 @@ app.layout = html.Div(
                     href=page["relative_path"], 
                     className="custom-link"
                 )
-                for page in dash.page_registry.values()
+                for page in orden_paginas
             ],
             className="link-container"  # Clase para el nuevo contenedor
         ),
