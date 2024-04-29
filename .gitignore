@@ -2,3 +2,4 @@
 .things
 .DS_Store
 __pycache__/
+.development.env
