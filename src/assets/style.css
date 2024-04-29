@@ -1,64 +1,64 @@
 #grafica-contenedor1 {
-    width: 410px; /* Cambia el ancho a 400px */
-    height: 280px; /* Cambia la altura a 400px */
+    width: 28%; /* Cambia el ancho a 400px */
+    height: 42.5%; /* Cambia la altura a 400px */
     position: absolute;
-    left: 1020px; /* Mueve el contenedor 100px a la derecha */
-    top: 100px; /* Mueve el contenedor 150px hacia abajo */
+    left: 71%; /* Mueve el contenedor 100px a la derecha */
+    top: 15%; /* Mueve el contenedor 150px hacia abajo */
     border: 3px; /* Cambia el borde a azul y lo hace más grueso */
     border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
     background-color: white; /* Establece el color de fondo a blanco */
 }
 
 #grafica-contenedor2 {
-    width: 277px;
-    height: 370px;
+    width: 19.5%;
+    height: 56.5%;
     position: absolute;
-    left: 730px;
-    top: 10px;
+    left: 50.55%;
+    top: 1%;
     border: 2px;
     border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
     background-color: white; /* Establece el color de fondo a blanco */
 }
 
 #grafica-contenedor3 {
-    width: 700px;
-    height: 300px;
+    width: 48.5%;
+    height: 33.5%;
     position: absolute;
-    left: 730px;
-    top: 400px;
+    left: 50.55%;
+    top: 59.5%;
     border: 2px;
     border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
     background-color: white; /* Establece el color de fondo a blanco */
 }
 
 #grafica-contenedor4 {
-    width: 700px;
-    height: 250px;
+    width: 49%;
+    height: 33.3%;
     position: absolute;
-    left: 10px;
-    top: 450px;
+    left: 0.7%;
+    top: 59.5%;
     border: 2px;
     border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
     background-color: white; /* Establece el color de fondo a blanco */
 }
 
 #grafica-contenedor5 {
-    width: 250px;
-    height: 425px;
+    width: 17.5%;
+    height: 56.5%;
     position: absolute;
-    left: 465px;
-    top: 10px;
+    left: 32.3%;
+    top: 1%;
     border: 2px;
     border-radius: 30px; /* Ajusta el valor según tu preferencia para el redondeo de las esquinas */
     background-color: white; /* Establece el color de fondo a blanco */
 }
 
 #map-container {
-    width: 440px;
-    height: 425px;
+    width: 30.7%;
+    height: 56.5%;
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 0.7%;
+    top: 1%;
     border-radius: 30px; /* Ajusta el valor según tux preferencia para el redondeo de las esquinas */
     background-color: white; /* Establece el color de fondo a blanco */
     overflow: hidden; /* Oculta el contenido que se desborda */
@@ -79,13 +79,15 @@
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    width: 155px; /* Puedes ajustar el ancho según tus necesidades */
-    height: 40px; /* Puedes ajustar la altura según tus necesidades */
+    width: 10.5%; /* Puedes ajustar el ancho según tus necesidades */
+    height: 6.7%; /* Puedes ajustar la altura según tus necesidades */
     position: absolute;
     top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centrar el contenido verticalmente */
+    font-family: 'Arial Bold', sans-serif;
+    font-size: 80%;
 }
 
 /* Posicionamiento específico para cada tarjeta */
@@ -97,7 +99,7 @@
 
 #tarjeta-numero-especies {
     left: 1230px;
-    background-color: #0b7212;
+    background-color: #11a216ff;
     top: 10px;
 }
 
@@ -112,13 +114,13 @@
     bottom: 0;
     right: 0; /* Ancla el contenedor al lado derecho de la pantalla */
     background-color: rgba(26, 114, 51, 0.7);
-    padding: 2px 30px; /* top, right, bottom, left */
+    padding: 0.28% 2%; /* top, right, bottom, left */
     font-size: 19px;
     color: rgb(255, 255, 255);
     z-index: 10;
     text-align: right; /* Alinea el texto a la izquierda dentro del contenedor */
     border-radius: 0; /* Elimina el redondeo de las esquinas si quieres que se extienda completamente */
-    font: oblique bold 140% cursive;
+    font: oblique bold 120% cursive;
 }
 
 #nombre-aves {
@@ -127,13 +129,13 @@
     bottom: 0;
     left: 0; /* Ancla el contenedor al lado derecho de la pantalla */
     background-color: rgba(26, 114, 51, 0.7);
-    padding: 2px 30px; /* top, right, bottom, left */
+    padding: 0.28% 2%; /* top, right, bottom, left */
     font-size: 19px;
     color: rgb(255, 255, 255);
     z-index: 10;
     text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
     border-radius: 0; /* Elimina el redondeo de las esquinas si quieres que se extienda completamente */
-    font: oblique bold 140% cursive;
+    font: oblique bold 120% cursive;
 }
 
 
@@ -188,3 +190,17 @@ body {
     background-size: cover;
   }
   
+.responsive-graph {
+    width: 100%;
+    height: 105%;
+}   
+
+.responsive-graph1 {
+    width: 100%;
+    height: 100%;
+}
+
+.responsive-graph2 {
+    width: 105%;
+    height: 115%;
+}

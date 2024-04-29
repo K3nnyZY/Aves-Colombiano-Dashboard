@@ -7,8 +7,8 @@ COPY ./requirements.txt ./requirements.txt
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./src ./
+COPY ./ ./
 
 EXPOSE 8050
 
-CMD ["python", "app.py"]
+CMD ["python", "src/app.py"]

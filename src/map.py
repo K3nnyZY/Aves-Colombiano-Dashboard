@@ -26,8 +26,8 @@ cursor.close()
 conn.close()
 
 # Leer los datos geográficos desde un archivo JSON para Colombia
-with open("colombia.json", "r") as file:
-    data_colombia = json.load(file)
+# with open("colombia.json", "r") as file:
+#     data_colombia = json.load(file)
 
 # Extraer latitudes, longitudes y especies de los datos
 latitudes = [item[0] for item in datos]
@@ -37,21 +37,23 @@ species = [item[2] for item in datos]
 # Crear un mapa centrado en una ubicación inicial en Colombia
 mapa = folium.Map(location=[9.60971, -75.08175], zoom_start=7) 
 
-# Opcionalmente, añadir un choropleth
-choropleth = folium.Choropleth(
-    geo_data=data_colombia,
-    fill_color='YlOrRd',
-    fill_opacity=0.7,
-    line_opacity=0.2,
-).add_to(mapa)
+# # Opcionalmente, añadir un choropleth
+# choropleth = folium.Choropleth(
+#     geo_data=data_colombia,
+#     fill_color='YlOrRd',
+#     fill_opacity=0.7,
+#     line_opacity=0.2,
+# ).add_to(mapa)
 
 
 icon_create_function = '''
 function(cluster) {
+    var childCount = cluster.getChildCount();
+    var size = (10 ,6 * Math.log(childCount + 1));  // Calcula el tamaño base + un incremento proporcional al logaritmo del número de hijos
     return L.divIcon({
-        html: '<div style="background-color: rgba(50, 205, 50, 0.8); border-radius: 50%; color: white; display: flex; justify-content: center; align-items: center; width: 40px; height: 40px;">' + cluster.getChildCount() + '</div>',
+        html: '<div style="background-color: rgba(50, 155, 50, 0.8); border-radius: 50%; color: white; display: flex; justify-content: center; align-items: center; width: ' + size + 'px; height: ' + size + 'px;">' + childCount + '</div>',
         className: "marker-cluster-custom",
-        iconSize: L.point(40, 40, true)
+        iconSize: L.point(size, size, true)
     });
 }
 '''
